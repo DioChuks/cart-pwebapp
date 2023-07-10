@@ -1,11 +1,10 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js'
-import { getDatabase, ref, push } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js'
+import { getDatabase, ref, push, onValue } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js'
 const appSettings = {
     databaseURL: "https://cart-playground-34b8b-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-const moviesInDb = ref(database, "movies")
 const shoppingListInDb = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById('input-field')
 const addButtonEl = document.getElementById('add-button')
@@ -21,16 +20,18 @@ addButtonEl.addEventListener('click', ()=>{
     clearInputFieldEl()
     appendItemToShoppingListEl(inputValue)
 })
+onValue(shoppingListInDb, function(snapshot) {
+    let shoppingItemsArray = Object.values(snapshot.val())
+    shoppingListEl.innerHTML = ""
+    for (let q = 0; q < shoppingItemsArray.length; q++) {
+        const element = shoppingItemsArray[q];
+        appendItemToShoppingListEl(element)
+        console.log(element);
+    }
+})
 function clearInputFieldEl(){
     inputFieldEl.value = "";
 }
 function appendItemToShoppingListEl(itemValue) {
     shoppingListEl.innerHTML += `<li>${itemValue}</li>`
 }
-
-let scrimbaUsers = {
-    "i1": "user@scrimba.com",
-    "i2": "user2@scrimba.com",
-    "i3": "user3@scrimba.com"
-}
-console.log(Object.entries(scrimbaUsers))
