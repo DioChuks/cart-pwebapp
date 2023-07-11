@@ -39,3 +39,25 @@ button{
 button:hover{
     background-color: #9b3297;
 }
+#shopping-list{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+    /* margin: 30px auto; */
+    /* width: 100%; */
+    gap: 10px;
+}
+#shopping-list li{
+    font-size: 20px;
+    background-color: #fffdf8;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+#shopping-list li:hover{
+    background-color: gray;
+    color: #fff;
+}
