@@ -2,7 +2,7 @@ html, body{
     padding: 0;
     margin: 0;
     font-family: 'Marck Script', cursive;
-    background-color: #eef0f4;
+    background-color: #e9dce9;
     color: #2e0237;
     user-select: none;
 }
@@ -17,14 +17,14 @@ img{
     margin: 0 auto;
 }
 input{
-    color: #432000;
-    background-color: #dce1eb;
+    color: #2e0237;
+    background-color: #f8c3f8;
     border: 0;
     padding: 15px;
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Marck Script', cursive;
     margin: 10px 0;
 }
 button{
@@ -35,7 +35,7 @@ button{
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Marck Script', cursive;
     cursor: pointer;
 }
 button:hover{
@@ -46,8 +46,6 @@ button:hover{
     list-style-type: none;
     padding: 0;
     flex-wrap: wrap;
-    /* margin: 30px auto; */
-    /* width: 100%; */
     gap: 10px;
 }
 #shopping-list li{
