@@ -3,6 +3,8 @@ html, body{
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background-color: #eef0f4;
+    color: #2e0237;
+    user-select: none;
 }
 .container{
     display: flex;
@@ -58,6 +60,7 @@ button:hover{
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 #shopping-list li:hover{
-    background-color: gray;
+    background-color: rgb(222, 164, 232);
     color: #fff;
+    cursor: pointer;
 }
